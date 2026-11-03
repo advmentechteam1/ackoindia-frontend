@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Reveal from '../components/Reveal';
 import Navbar from '../components/Navbar';
 import HeroBanner from '../components/HeroBanner';
 import HeroSection from '../components/HeroSection';
@@ -11,6 +12,8 @@ import NetworkLocator from '../components/NetworkLocator';
 import AddonsGrid from '../components/AddonsGrid';
 import PressRecognition from '../components/PressRecognition';
 import FaqSection from '../components/FaqSection';
+import EnterprisePage from '../components/EnterprisePage';
+import SupportPage from '../components/SupportPage';
 import Footer from '../components/Footer';
 import QuoteModal from '../components/QuoteModal';
 import { useInsuranceContext } from '../context/InsuranceContext';
@@ -18,6 +21,34 @@ import { CheckCircle2, AlertCircle } from 'lucide-react';
 
 export default function Home() {
   const { toast } = useInsuranceContext();
+  const readPage = () => {
+    const h = window.location.hash;
+    if (h === '#enterprise') return 'enterprise';
+    if (h === '#support') return 'support';
+    return 'home';
+  };
+  const [page, setPage] = useState(readPage);
+
+  useEffect(() => {
+    const onHash = () => {
+      setPage((prev) => {
+        const next = readPage();
+        if (prev !== next) window.scrollTo({ top: 0 });
+        return next;
+      });
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+
+  useEffect(() => {
+    const titles = {
+      enterprise: 'ACKOIndia for Enterprise: Group Health, Fleet & Embedded Insurance',
+      support: 'ACKOIndia Support: Claims, Policies & Help',
+      home: 'ACKOIndia: Direct Car, Bike & Health Insurance | Instant 7-Min Claims'
+    };
+    document.title = titles[page];
+  }, [page]);
 
   return (
     <div className="min-h-screen bg-white text-gray-900 selection:bg-indigo-600 selection:text-white font-sans antialiased overflow-x-hidden">
@@ -38,36 +69,68 @@ export default function Home() {
       <Navbar />
       
       <main className="w-full webpage-padding">
+        {page === 'enterprise' ? (
+          <Reveal from="up">
+            <EnterprisePage />
+          </Reveal>
+        ) : page === 'support' ? (
+          <Reveal from="up">
+            <SupportPage />
+          </Reveal>
+        ) : (
+          <>
         {/* 1. Hero Section with 6 Bento Insurance Cards */}
         <HeroBanner />
-        <HeroSection />
+        <Reveal from="left">
+              <HeroSection />
+            </Reveal>
 
         {/* 2. Trust Metrics Bar */}
-        <TrustMetrics />
+        <Reveal from="right">
+              <TrustMetrics />
+            </Reveal>
 
         {/* 3. Claims Experience & Customer Promises */}
-        <ClaimsExperience />
+        <Reveal from="left">
+              <ClaimsExperience />
+            </Reveal>
 
         {/* 4. Full-Screen Interactive 3D Digital Showroom */}
-        <CarShowroom />
+        <Reveal from="right">
+              <CarShowroom />
+            </Reveal>
 
         {/* 5. Traditional Agents vs Direct ACKOIndia Comparison */}
-        <ComparisonSection />
+        <Reveal from="left">
+              <ComparisonSection />
+            </Reveal>
 
         {/* 6. Free Helpful Services & Policy Analyser Gauge */}
-        <AppFeatures />
+        <Reveal from="right">
+              <AppFeatures />
+            </Reveal>
 
         {/* 7. 14,000+ Cashless Network Locator (Garages & Hospitals) */}
-        <NetworkLocator />
+        <Reveal from="left">
+              <NetworkLocator />
+            </Reveal>
 
         {/* 8. Comprehensive Protection Add-on Riders */}
-        <AddonsGrid />
+        <Reveal from="right">
+              <AddonsGrid />
+            </Reveal>
 
         {/* 9. Press & Awards Recognition */}
-        <PressRecognition />
+        <Reveal from="left">
+              <PressRecognition />
+            </Reveal>
 
         {/* 10. Frequently Asked Questions (Accordion) & 24x7 Helpline */}
-        <FaqSection />
+        <Reveal from="right">
+              <FaqSection />
+            </Reveal>
+                </>
+        )}
       </main>
 
       {/* 11. Complete Footer with Accordion Directories & IRDAI Legal Disclosure */}

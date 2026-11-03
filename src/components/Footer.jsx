@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 
 import Logo from './Logo';
+import { CONTACT } from '../utils/contact';
 
 export default function Footer() {
   const [activeTab, setOpenAccordion] = useState(0);
@@ -72,14 +73,14 @@ export default function Footer() {
             </p>
             <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-gray-900 border border-gray-800 px-4 py-2 text-xs font-semibold text-gray-300">
               <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-              Claims helpline 1800-266-2256 • 24x7
+              Call us {CONTACT.phoneDisplay}
             </div>
           </div>
 
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               ['Products', [['Car insurance', '#products'], ['Bike insurance', '#products'], ['Health insurance', '#products'], ['Life insurance', '#products'], ['Travel insurance', '#products'], ['Enterprise solutions', '#enterprise']]],
-              ['Company', [['About us', '#about'], ['Careers', '#careers'], ['Contact us', '#contact'], ['Board of directors', '#board'], ['Investor relations', '#investors']]],
+              ['Company', [['About us', '#about'], ['Careers', '#careers'], ['Support', '#support'], ['Contact us', '#support'], ['Board of directors', '#board'], ['Investor relations', '#investors']]],
               ['Brand Hub', [['All resources', '#resources'], ['Customer stories', '#stories'], ['Media Kit', '#media'], ['Articles & Guides', '#articles'], ['E-books', '#ebooks']]],
               ['Legal & Disclosures', [['Financials & Disclosures', '#disclosures'], ['Privacy policy', '#privacy'], ['Terms & conditions', '#terms'], ['Anti-fraud policy', '#fraud'], ['Grievance Redressal', '#grievance']]]
             ].map(([title, links]) => (
@@ -122,21 +123,21 @@ export default function Footer() {
 
         {/* Corporate Address & Social Links */}
         <div className="pt-8 pb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-black text-sm">
+          <div className="flex items-start gap-3 min-w-0">
+            <div className="w-9 h-9 shrink-0 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-300">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <div>
-              <h5 className="text-white font-extrabold text-sm tracking-wide">
+            <div className="min-w-0">
+              <h5 className="text-white font-extrabold text-sm sm:text-base leading-snug">
                 ACKOIndia Technology and Services Limited
               </h5>
-              <p className="text-[11px] text-gray-400 mt-0.5 max-w-xl">
-                #36/5, Hustlehub One East, Somasandrapalya, 27th Main Rd, Sector 2, HSR Layout, Bengaluru, Karnataka 560102
+              <p className="text-xs sm:text-[13px] text-gray-400 mt-1 max-w-xl leading-relaxed">
+                {CONTACT.addressInline}
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-8 h-8 rounded-full bg-gray-800 hover:bg-indigo-600 flex items-center justify-center text-gray-300 hover:text-white transition">
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.6a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6 1.6 1.6 0 0 0-1.6-1.6Z"/></svg>
             </a>
@@ -156,20 +157,6 @@ export default function Footer() {
             >
               <ArrowUp className="w-4 h-4" />
             </button>
-          </div>
-        </div>
-
-        {/* Disclaimer / Regulatory Note */}
-        <div className="pt-4 border-t border-gray-900 text-[10px] text-gray-400 leading-relaxed space-y-1.5">
-          <p>
-            *IRDAI Regn No. 157 | Category: General Insurance | CIN: U66000KA2016PLC138288 | Trade logo displayed above belongs to ACKOIndia Technology and Services Limited and licensed to ACKOIndia General Insurance Limited.
-          </p>
-          <p>
-            Insurance is the subject matter of solicitation. For more details on risk factors, terms, conditions, and exclusions, please read the sales brochure carefully before concluding a sale. Savings percentage calculated based on comparative third-party rate tariffs.
-          </p>
-          <div className="pt-2 flex items-center justify-between text-gray-400">
-            <span>© {new Date().getFullYear()} ACKOIndia. All rights reserved.</span>
-            <span>Made for high-speed direct insurance in India</span>
           </div>
         </div>
 

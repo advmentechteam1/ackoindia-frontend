@@ -11,7 +11,7 @@ const stats = [
 export default function TrustMetrics() {
   return (
     <section className="bg-white py-14 border-b border-gray-200/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-[4%]">
         <div className="rounded-[28px] bg-gradient-to-r from-indigo-950 via-slate-900 to-indigo-950 text-white p-8 sm:p-10 grid lg:grid-cols-12 gap-8 items-center relative overflow-hidden">
           <div className="absolute -top-20 left-1/3 w-72 h-72 rounded-full bg-indigo-500/20 blur-3xl pointer-events-none"></div>
 

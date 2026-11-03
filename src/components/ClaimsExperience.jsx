@@ -39,7 +39,7 @@ export default function ClaimsExperience() {
 
   return (
     <section className="bg-[#f8f9fa] py-16 border-b border-gray-200/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-[4%]">
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
 

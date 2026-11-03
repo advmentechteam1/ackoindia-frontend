@@ -17,7 +17,7 @@ export default function InsuranceGrid() {
 
   return (
     <section id="products" className="py-16 bg-slate-50/70 border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-[4%]">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">

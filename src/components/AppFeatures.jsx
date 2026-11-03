@@ -49,7 +49,7 @@ export default function AppFeatures() {
 
   return (
     <section className="bg-white py-16 sm:py-20 border-b border-gray-200/60 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-[4%]">
 
         <div className="max-w-2xl mb-10">
           <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#6332ec]">Free with every policy</span>

@@ -81,7 +81,7 @@ export default function HeroBanner() {
 
   return (
     <section
-      className="relative -mx-[4.348%] overflow-hidden"
+      className="relative overflow-hidden"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >

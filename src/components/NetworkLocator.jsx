@@ -81,7 +81,7 @@ export default function NetworkLocator() {
 
   return (
     <section className="bg-white py-16 sm:py-20 border-b border-gray-200/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-[4%]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
           {/* Left: controls */}
@@ -144,8 +144,9 @@ export default function NetworkLocator() {
             {currentList.map((item) => (
               <div
                 key={item.name}
-                className="rounded-3xl border border-gray-200 bg-slate-50/60 hover:bg-white hover:border-indigo-300 hover:shadow-lg transition-all p-5 flex items-center gap-4 group"
+                className="rounded-3xl border border-gray-200 bg-slate-50/60 hover:bg-white hover:border-indigo-300 hover:shadow-lg transition-all p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center gap-4 group"
               >
+                <div className="flex items-start sm:items-center gap-4 flex-1 min-w-0">
                 <div className={`w-12 h-12 shrink-0 rounded-2xl flex items-center justify-center ${isGarage ? 'bg-indigo-50 text-indigo-600' : 'bg-rose-50 text-rose-600'}`}>
                   {isGarage ? <Wrench className="w-5 h-5" /> : <Building2 className="w-5 h-5" />}
                 </div>
@@ -155,14 +156,16 @@ export default function NetworkLocator() {
                     <h4 className="text-sm sm:text-base font-extrabold text-gray-900 group-hover:text-indigo-600 transition-colors">{item.name}</h4>
                     <span className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-2 py-0.5 rounded-full whitespace-nowrap">{item.badge}</span>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1 flex items-center gap-1.5">
+                  <p className="text-xs text-gray-500 mt-1.5 flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
                     <MapPin className="w-3.5 h-3.5 text-gray-400 shrink-0" />
-                    {item.location}, {selectedCity} • <span className="font-semibold">{item.distance} away</span>
+                    <span>{item.location}, {selectedCity}</span>
+                    <span className="font-semibold whitespace-nowrap">• {item.distance} away</span>
                   </p>
                   <p className="text-xs text-indigo-700 font-semibold mt-1">{item.note}</p>
                 </div>
+                </div>
 
-                <div className="flex flex-col sm:flex-row gap-2 shrink-0">
+                <div className="flex flex-row gap-2 shrink-0 w-full sm:w-auto">
                   <button
                     onClick={() => showToast(`Calling ${item.contact}`)}
                     aria-label={`Call ${item.name}`}
@@ -172,7 +175,7 @@ export default function NetworkLocator() {
                   </button>
                   <button
                     onClick={() => showToast(`Cashless visit requested: ${item.name}`)}
-                    className="px-4 h-10 rounded-full bg-gray-950 hover:bg-[#6332ec] text-white text-xs font-bold flex items-center justify-center gap-1.5 transition whitespace-nowrap"
+                    className="flex-1 sm:flex-none px-4 h-10 rounded-full bg-gray-950 hover:bg-[#6332ec] text-white text-xs font-bold flex items-center justify-center gap-1.5 transition whitespace-nowrap"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5" /> Book visit
                   </button>

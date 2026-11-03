@@ -69,7 +69,7 @@ export default function CarShowroom() {
         {/* ========================================================= */}
         {/* Header (Clean, bold, non-duplicated)                      */}
         {/* ========================================================= */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-8">
+        <div className="max-w-4xl mx-auto px-[4%] mb-8">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold mb-3 border border-indigo-100/60">
             <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
             <span>Digital Car Showroom • Powered by ACKOIndia DRIVE</span>
@@ -143,7 +143,7 @@ export default function CarShowroom() {
           {/* Floating Action Pill Bar (Now fully reactive to arrows!) */}
           {/* ========================================================= */}
           <div className="mt-8 relative z-20 flex justify-center px-4">
-            <div className="inline-flex items-center justify-between gap-3 sm:gap-6 bg-white px-5 sm:px-8 py-3 sm:py-4 rounded-3xl border border-gray-200 shadow-lg">
+            <div className="flex w-full max-w-[400px] sm:w-auto sm:max-w-none items-center justify-between gap-2 sm:gap-6 bg-white px-3 sm:px-8 py-3 sm:py-4 rounded-3xl border border-gray-200 shadow-lg">
               
               {/* Left Arrow Button */}
               <button
@@ -154,8 +154,9 @@ export default function CarShowroom() {
                 <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
 
-              {/* Car Name & Tag */}
-              <div className="text-left px-2 sm:px-4 border-r border-gray-200">
+              {/* Name + price (stacked on mobile) */}
+              <div className="flex-1 min-w-0 flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+              <div className="text-center sm:text-left px-2 sm:px-4 sm:border-r sm:border-gray-200">
                 <h4 className="text-sm sm:text-lg font-black text-gray-900 leading-tight">
                   {currentCar.name}
                 </h4>
@@ -165,8 +166,8 @@ export default function CarShowroom() {
               </div>
 
               {/* Pricing & Green Savings Badge */}
-              <div className="text-left px-2 sm:px-4">
-                <div className="flex items-baseline gap-1.5 sm:gap-2">
+              <div className="text-center sm:text-left px-2 sm:px-4">
+                <div className="flex items-baseline justify-center sm:justify-start gap-1.5 sm:gap-2 whitespace-nowrap">
                   <span className="text-sm sm:text-xl font-black text-gray-900">
                     {currentCar.offerPrice}
                   </span>
@@ -174,9 +175,10 @@ export default function CarShowroom() {
                     {currentCar.originalPrice}
                   </span>
                 </div>
-                <div className="mt-1 inline-block border border-emerald-500 text-emerald-800 bg-emerald-50 text-[10px] sm:text-xs font-black px-2.5 sm:px-3 py-0.5 rounded-full shadow-xs">
+                <div className="mt-1 inline-block whitespace-nowrap border border-emerald-500 text-emerald-800 bg-emerald-50 text-[10px] sm:text-xs font-black px-2.5 sm:px-3 py-0.5 rounded-full shadow-xs">
                   {currentCar.savings}
                 </div>
+              </div>
               </div>
 
               {/* Right Arrow Button */}
@@ -192,12 +194,12 @@ export default function CarShowroom() {
           </div>
 
           {/* Quick Specs Pill under Pill Bar */}
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-gray-500">
+          <div className="mt-4 px-4 flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-4 text-xs font-semibold text-gray-500 text-center">
             <span className="flex items-center gap-1.5">
               <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3]" />
               {currentCar.delivery}
             </span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span className="flex items-center gap-1.5">
               <Zap className="w-3.5 h-3.5 text-indigo-600" />
               {currentCar.specs}

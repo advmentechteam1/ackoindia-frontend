@@ -41,7 +41,7 @@ export default function ComparisonSection() {
 
   return (
     <section className="bg-slate-50/70 py-16 sm:py-20 border-b border-gray-200/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-[4%]">
 
         {/* Header */}
         <div className="grid lg:grid-cols-12 gap-8 items-end mb-10">

@@ -59,7 +59,7 @@ export default function HeroSection() {
 
   return (
     <section className="bg-[#f8f9fa] pt-6 pb-12 border-b border-gray-200/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-[4%]">
         
         {/* Top Header: Headline on Left, Laurel Badges on Right */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
@@ -115,7 +115,7 @@ export default function HeroSection() {
           {/* Car insurance: tall feature card */}
           <div
             onClick={() => openQuoteForProduct({ id: 'car', title: 'Car insurance' })}
-            className="lg:col-span-5 rounded-[28px] p-7 bg-gradient-to-br from-indigo-50 via-white to-violet-50 border border-indigo-100/70 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col group relative overflow-hidden min-h-[440px]"
+            className="lg:col-span-5 rounded-[28px] p-5 sm:p-7 bg-gradient-to-br from-indigo-50 via-white to-violet-50 border border-indigo-100/70 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col group relative overflow-hidden min-h-[440px]"
           >
             <div className="relative z-10 max-w-[280px]">
               <h3 className="text-2xl font-extrabold text-gray-900 group-hover:text-indigo-600 transition-colors">Car insurance</h3>
@@ -147,7 +147,7 @@ export default function HeroSection() {
               <div
                 key={c.id}
                 onClick={() => openQuoteForProduct({ id: c.product, title: c.quoteTitle })}
-                className={`rounded-[28px] p-6 border hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col group relative overflow-hidden min-h-[210px] ${c.bg}`}
+                className={`rounded-[28px] p-5 sm:p-6 border hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col group relative overflow-hidden min-h-[210px] ${c.bg}`}
               >
                 <div className="relative z-10 max-w-[62%]">
                   <h3 className="text-lg font-extrabold text-gray-900 group-hover:text-indigo-600 transition-colors leading-snug">{c.title}</h3>

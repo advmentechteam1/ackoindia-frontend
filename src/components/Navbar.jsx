@@ -180,7 +180,7 @@ export default function Navbar() {
 
   return (
     <header ref={navRef} className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div className="w-full px-[4%] py-3">
         <div className="flex items-center justify-between h-14">
           
           {/* Left: Brand Logo & Main Links */}
@@ -233,7 +233,7 @@ export default function Navbar() {
               {/* Support */}
               <a 
                 href="#support" 
-                onClick={() => { setActiveDropdown(null); showToast('Support line available 24x7 at 1800-266-2256'); }}
+                onClick={() => setActiveDropdown(null)}
                 className="px-3.5 py-2 rounded-xl hover:bg-gray-50 hover:text-gray-950 transition"
               >
                 Support
@@ -441,7 +441,7 @@ export default function Navbar() {
       {/* ------------------------------------------------------------- */}
       {activeDropdown === 'products' && (
         <div className="hidden lg:block absolute left-0 right-0 top-full bg-white border-b border-gray-200 shadow-2xl animate-in fade-in slide-in-from-top-1 duration-200 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="w-full px-[4%] py-6">
             <div className="grid grid-cols-12 gap-8 items-start">
 
               {/* Column 1: Left Category list */}
@@ -524,7 +524,7 @@ export default function Navbar() {
       {/* ------------------------------------------------------------- */}
       {activeDropdown === 'whyAcko' && (
         <div className="hidden lg:block absolute left-0 right-0 top-full bg-white border-b border-gray-200 shadow-2xl animate-in fade-in slide-in-from-top-1 duration-200 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="w-full px-[4%] py-8">
             <div className="grid grid-cols-12 gap-8 items-stretch">
 
               {/* Left Column: Menu links with descriptions */}
@@ -673,7 +673,7 @@ export default function Navbar() {
 
             <a
               href="#support"
-              onClick={() => { setMobileMenuOpen(false); showToast('Support line available 24x7 at 1800-266-2256'); }}
+              onClick={() => setMobileMenuOpen(false)}
               className="block py-3.5 text-sm font-bold text-gray-900"
             >
               Support

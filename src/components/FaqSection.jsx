@@ -35,7 +35,7 @@ export default function FaqSection() {
 
   return (
     <section className="bg-white py-16 sm:py-20 border-b border-gray-200/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-[4%]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
           {/* Left: heading + help card */}
