@@ -4,6 +4,8 @@ import {
   ArrowUp
 } from 'lucide-react';
 
+import Logo from './Logo';
+
 export default function Footer() {
   const [activeTab, setOpenAccordion] = useState(0);
 
@@ -64,12 +66,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-12 border-b border-gray-800">
 
           <div className="lg:col-span-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-indigo-600 flex items-center justify-center text-white">
-                <ShieldCheck className="w-5 h-5" />
-              </div>
-              <span className="text-white text-xl font-black tracking-tight">ACKOIndia</span>
-            </div>
+            <Logo dark />
             <p className="text-sm text-gray-400 mt-4 max-w-xs leading-relaxed">
               Simple, direct insurance for your car, bike, health and travel. No agents, no paperwork, no surprises.
             </p>

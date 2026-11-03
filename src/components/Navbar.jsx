@@ -21,6 +21,7 @@ import {
   X,
   ArrowRight
 } from 'lucide-react';
+import Logo from './Logo';
 import { useInsuranceContext } from '../context/InsuranceContext';
 
 export default function Navbar() {
@@ -185,26 +186,7 @@ export default function Navbar() {
           {/* Left: Brand Logo & Main Links */}
           <div className="flex items-center gap-7">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-2.5 group" aria-label="ACKOIndia home">
-              <svg className="w-10 h-10 group-hover:rotate-6 transition-transform" viewBox="0 0 40 40" fill="none">
-                <defs>
-                  <linearGradient id="ackoLogoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#7c3aed" />
-                    <stop offset="1" stopColor="#4f46e5" />
-                  </linearGradient>
-                </defs>
-                <rect width="40" height="40" rx="12" fill="url(#ackoLogoGrad)" />
-                <path d="M11 29 L20 10 L29 29" stroke="#fff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M15.5 23.5 H24.5" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" />
-                <circle cx="31" cy="9" r="3.2" fill="#34d399" />
-              </svg>
-              <span className="leading-none">
-                <span className="block text-[22px] font-black tracking-tight text-gray-900 lowercase">
-                  acko<span className="text-[#6332ec]">india</span>
-                </span>
-                <span className="hidden sm:block text-[9px] font-bold tracking-[0.22em] uppercase text-gray-400 mt-1">Direct insurance</span>
-              </span>
-            </a>
+            <Logo />
 
             {/* Nav Menu */}
             <nav className="hidden lg:flex items-center gap-1.5 text-sm font-semibold text-gray-700">
