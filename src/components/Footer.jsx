@@ -160,6 +160,10 @@ export default function Footer() {
           </div>
         </div>
 
+        <p className="pt-6 mt-2 border-t border-gray-800 text-xs text-gray-500 leading-relaxed">
+          ACKOIndia is an independent platform and is not affiliated with ACKO General Insurance Limited. Quotes shown are indicative only.
+        </p>
+
       </div>
     </footer>
   );

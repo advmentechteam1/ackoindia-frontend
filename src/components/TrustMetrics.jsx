@@ -2,10 +2,10 @@ import React from 'react';
 import { Zap, BadgeCheck, Headphones, Users } from 'lucide-react';
 
 const stats = [
-  { icon: Zap, value: '7 mins', label: 'Fastest claim settlement' },
-  { icon: BadgeCheck, value: '94.3%', label: 'Claims settled within a week' },
+  { icon: Zap, value: '7 mins', label: 'Quick claim approval' },
+  { icon: BadgeCheck, value: '60 sec', label: 'Policy issued online' },
   { icon: Headphones, value: '24x7', label: 'Human support, every day' },
-  { icon: Users, value: '1 Cr+', label: 'Customers who trust us' }
+  { icon: Users, value: '0', label: 'Paper forms to fill' }
 ];
 
 export default function TrustMetrics() {
@@ -16,7 +16,7 @@ export default function TrustMetrics() {
           <div className="absolute -top-20 left-1/3 w-72 h-72 rounded-full bg-indigo-500/20 blur-3xl pointer-events-none"></div>
 
           <div className="lg:col-span-4 relative">
-            <span className="text-[11px] font-extrabold uppercase tracking-widest text-emerald-300">Proof, not promises</span>
+            <span className="text-[11px] font-extrabold uppercase tracking-widest text-emerald-300">What you can expect</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mt-2 leading-tight">
               Trust is earned, one claim at a time
             </h2>

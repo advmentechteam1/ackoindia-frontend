@@ -121,7 +121,7 @@ export default function ComparisonSection() {
         <div className="mt-6 rounded-2xl bg-white border border-gray-200 px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-xs font-semibold text-gray-600">
             <ShieldCheck className="w-4 h-4 text-indigo-600" />
-            <span>Regulated by IRDAI • No hidden clauses • Carry over your 50% NCB</span>
+            <span>Clear pricing • No hidden clauses • Carry over your No Claim Bonus</span>
           </div>
           <button
             onClick={() => openQuoteForProduct({ id: 'car', title: 'Compare Rates Live' })}

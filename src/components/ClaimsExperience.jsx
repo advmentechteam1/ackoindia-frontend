@@ -8,22 +8,22 @@ export default function ClaimsExperience() {
 
   const testimonials = [
     {
-      text: "I recently switched to ACKOIndia Insurance and I'm thoroughly impressed! Their app is incredibly user-friendly, making it easy to purchase and manage policies. The claims process is also seamless and hassle-free.",
-      initial: "S",
-      author: "Sahil Roy",
-      role: "ACKOIndia customer"
+      text: "No hidden charges. The price you see in your quote is the price you pay, with every inclusion and exclusion explained in plain language.",
+      initial: "1",
+      author: "Clear pricing",
+      role: "Our promise"
     },
     {
-      text: "Had a bumper crack in Delhi traffic. Took 2 photos on the app, cashless approval came in 12 minutes! Car was picked up from my doorstep and delivered repaired in 2 days.",
-      initial: "R",
-      author: "Rohit Verma",
-      role: "ACKOIndia customer"
+      text: "File a claim from your phone with a few photos. We keep you updated at every step, so you never have to chase anyone.",
+      initial: "2",
+      author: "Simple claims",
+      role: "Our promise"
     },
     {
-      text: "Zero deductions on medical surgery bill at Apollo Hospital. The insurance claim desk cleared everything directly without endless paperwork. Truly exceptional experience.",
-      initial: "A",
-      author: "Ananya Deshmukh",
-      role: "ACKOIndia customer"
+      text: "Real people are available to help you, every day. Call, message or write to us and we will get back to you quickly.",
+      initial: "3",
+      author: "Human support",
+      role: "Our promise"
     }
   ];
 
@@ -109,24 +109,12 @@ export default function ClaimsExperience() {
               <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
                 Promises made.<br />Promises kept.
               </h2>
-              <div className="shrink-0 text-right">
-                <div className="flex items-center justify-end gap-1">
-                  <span className="text-2xl font-black text-gray-900">4.8</span>
-                  <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
-                </div>
-                <span className="text-[11px] text-gray-500 font-semibold">12,000+ reviews</span>
-              </div>
             </div>
 
             {/* Quote card */}
             <div className="mt-8 flex-1 rounded-3xl bg-[#f8f9fa] border border-gray-100 p-7 relative flex flex-col justify-between">
               <Quote className="absolute top-5 right-6 w-12 h-12 text-indigo-100 fill-indigo-100" />
               <div>
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
                 <p key={activeTestimonial} className="mt-4 text-base sm:text-lg text-gray-800 font-medium leading-relaxed relative animate-in fade-in duration-300">
                   “{current.text}”
                 </p>

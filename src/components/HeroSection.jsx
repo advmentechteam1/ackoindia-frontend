@@ -79,10 +79,10 @@ export default function HeroSection() {
               </svg>
               <div className="text-center">
                 <span className="block text-xs font-bold text-gray-800 leading-tight">
-                  India's #1*
+                  100% digital
                 </span>
                 <span className="block text-[11px] text-gray-500 font-medium leading-tight">
-                  insurance app
+                  no paperwork
                 </span>
               </div>
               <svg className="w-5 h-9 text-gray-400 fill-current opacity-80 -scale-x-100" viewBox="0 0 24 40">
@@ -97,10 +97,10 @@ export default function HeroSection() {
               </svg>
               <div className="text-center">
                 <span className="block text-xs font-bold text-gray-800 leading-tight">
-                  Best direct
+                  Instant quotes
                 </span>
                 <span className="block text-[11px] text-gray-500 font-medium leading-tight">
-                  insurer 2025*
+                  no agents
                 </span>
               </div>
               <svg className="w-5 h-9 text-gray-400 fill-current opacity-80 -scale-x-100" viewBox="0 0 24 40">

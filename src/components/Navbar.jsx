@@ -579,9 +579,9 @@ export default function Navbar() {
 
                   <div className="relative grid grid-cols-3 gap-3 mt-6">
                     {[
-                      { v: '4.8/5', l: 'Customer rating' },
-                      { v: '1 Cr+', l: 'Happy customers' },
-                      { v: '95%', l: 'Claims settled digitally' }
+                      { v: '60 sec', l: 'Policy issued' },
+                      { v: '7 min', l: 'Quick claim approval' },
+                      { v: '24x7', l: 'Support' }
                     ].map((s) => (
                       <div key={s.l} className="rounded-2xl bg-white/5 border border-white/10 px-4 py-3.5">
                         <div className="text-2xl font-black">{s.v}</div>

@@ -24,10 +24,10 @@ const tones = {
 };
 
 const stats = [
-  { v: '5,000+', l: 'Businesses covered' },
-  { v: '25 L+', l: 'Employees protected' },
+  { v: '24 hrs', l: 'Quote turnaround' },
+  { v: '1 day', l: 'Typical onboarding' },
   { v: '60 min', l: 'Cashless pre-auth' },
-  { v: '98%', l: 'Claims settled digitally' }
+  { v: 'API', l: 'Embedded cover' }
 ];
 
 const steps = [
@@ -197,7 +197,7 @@ export default function EnterprisePage() {
               Tell us a little about your business. An enterprise advisor will reach out within one working day.
             </p>
             <div className="mt-8 space-y-3 text-sm font-semibold text-gray-700">
-              <div className="flex items-center gap-3"><ShieldCheck className="w-5 h-5 text-[#6332ec]" /> IRDAI regulated insurer</div>
+              <div className="flex items-center gap-3"><ShieldCheck className="w-5 h-5 text-[#6332ec]" /> Transparent pricing, no hidden fees</div>
               <div className="flex items-center gap-3"><Users className="w-5 h-5 text-[#6332ec]" /> Dedicated onboarding team</div>
               <div className="flex items-center gap-3"><Headphones className="w-5 h-5 text-[#6332ec]" /> enterprise@ackoindia.com</div>
             </div>

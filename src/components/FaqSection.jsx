@@ -21,7 +21,7 @@ export default function FaqSection() {
     },
     {
       q: 'Is the digital policy valid with the Traffic Police and RTO?',
-      a: 'Yes. ACKOIndia is regulated by IRDAI (Regn No. 157) and your digital policy syncs with Parivahan and DigiLocker, so it is valid across India.'
+      a: 'Your policy is issued digitally and can be shown on your phone or stored in DigiLocker. We recommend keeping a copy of the policy document with you.'
     },
     {
       q: 'How does cashless hospitalisation work?',
