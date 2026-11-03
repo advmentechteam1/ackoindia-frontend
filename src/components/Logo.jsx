@@ -24,7 +24,7 @@ export default function Logo({ dark = false, href = '#' }) {
       <span className="leading-none">
         <span className={`block text-[23px] tracking-tight ${dark ? 'text-white' : 'text-gray-900'}`}>
           <span className="font-black">acko</span>
-          <span className={`font-medium ${dark ? 'text-gray-400' : 'text-gray-400'}`}>india</span>
+          <span className="font-medium text-gray-400">india</span>
         </span>
         <span className={`hidden sm:flex items-center gap-1.5 mt-1 text-[9px] font-bold tracking-[0.2em] uppercase ${dark ? 'text-violet-400' : 'text-[#6332ec]'}`}>
           <span className={`w-3 h-px ${dark ? 'bg-violet-400' : 'bg-[#6332ec]'}`}></span>Protected, simply

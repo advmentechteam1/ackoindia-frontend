@@ -114,10 +114,10 @@ export default function QuoteModal() {
                 className="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-lg shadow-indigo-200 flex items-center justify-center gap-2 transition active:scale-98 disabled:opacity-50"
               >
                 {loading ? (
-                  <span>Calculating Live Rates...</span>
+                  <span>Calculating estimate...</span>
                 ) : (
                   <>
-                    <span>Calculate Live Premium</span>
+                    <span>Get indicative estimate</span>
                     <ArrowRight className="w-4 h-4" />
                   </>
                 )}
@@ -131,14 +131,14 @@ export default function QuoteModal() {
               <div className="p-4 bg-slate-50 rounded-2xl border border-gray-200/80">
                 <div className="flex items-center justify-between pb-3 border-b border-gray-200">
                   <div>
-                    <span className="text-xs text-gray-400 font-bold uppercase">Estimated Quote</span>
+                    <span className="text-xs text-gray-400 font-bold uppercase">Illustrative demo estimate</span>
                     <div className="text-2xl font-black text-gray-900">
                       {formatCurrency(totalPremium)}
                       <span className="text-xs text-gray-400 font-medium ml-1">/year (+GST)</span>
                     </div>
                   </div>
                   <span className="text-xs bg-emerald-100 text-emerald-800 font-extrabold px-2.5 py-1 rounded-full">
-                    Quote ID: {result.quoteId}
+                    Sample estimate
                   </span>
                 </div>
 
@@ -196,12 +196,12 @@ export default function QuoteModal() {
                 <button
                   type="button"
                   onClick={() => {
-                    showToast(`Congratulations! Policy initiated for Quote #${result.quoteId}`);
+                    showToast('Demo only: no policy was created and nothing was purchased.');
                     handleClose();
                   }}
                   className="flex-1 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold shadow-lg shadow-emerald-200 flex items-center justify-center gap-2 transition"
                 >
-                  <span>Buy Policy Now • {formatCurrency(totalPremium)}</span>
+                  <span>Continue (demo) • {formatCurrency(totalPremium)}</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

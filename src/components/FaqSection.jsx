@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Plus, Minus, HelpCircle, PhoneCall, MessageSquare } from 'lucide-react';
-import { useInsuranceContext } from '../context/InsuranceContext';
+import { CONTACT } from '../utils/contact';
 
 export default function FaqSection() {
-  const { showToast } = useInsuranceContext();
   const [openIdx, setOpenIdx] = useState(0);
 
   const faqs = [
@@ -55,18 +54,20 @@ export default function FaqSection() {
               <h4 className="text-lg font-extrabold">Talk to a real person</h4>
               <p className="text-xs text-slate-400 mt-1">Advisors and claims specialists, available 24x7.</p>
               <div className="mt-5 flex flex-col sm:flex-row gap-3">
-                <button
-                  onClick={() => showToast('Connecting to 24x7 Claims Helpline: 1800-266-2256')}
+                <a
+                  href={CONTACT.phoneHref}
                   className="flex-1 px-4 py-3 rounded-xl bg-white text-gray-900 text-xs font-bold hover:bg-gray-100 transition flex items-center justify-center gap-2"
                 >
-                  <PhoneCall className="w-4 h-4 text-indigo-600" /> Call 1800-266-2256
-                </button>
-                <button
-                  onClick={() => showToast('Opening official WhatsApp Support Chat...')}
+                  <PhoneCall className="w-4 h-4 text-indigo-600" /> Call {CONTACT.phoneDisplay}
+                </a>
+                <a
+                  href={CONTACT.whatsappHref}
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex-1 px-4 py-3 rounded-xl bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 transition flex items-center justify-center gap-2"
                 >
                   <MessageSquare className="w-4 h-4" /> WhatsApp us
-                </button>
+                </a>
               </div>
             </div>
           </div>

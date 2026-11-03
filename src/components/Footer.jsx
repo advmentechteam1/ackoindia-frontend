@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { 
-  ShieldCheck, 
   ArrowUp
 } from 'lucide-react';
 
-import Logo from './Logo';
+import Logo, { LogoMark } from './Logo';
 import { CONTACT } from '../utils/contact';
 
 export default function Footer() {
@@ -26,7 +25,7 @@ export default function Footer() {
     {
       title: 'Health, life, and other services',
       items: [
-        'ACKOIndia Platinum Health Plan',
+        'ACKOIndia Health Plus plan',
         'Super Top-up Health Insurance',
         'Arogya Sanjeevani Policy',
         'Term Life Insurance Plan',
@@ -39,7 +38,7 @@ export default function Footer() {
       items: [
         'International Travel Insurance',
         'Domestic Travel Cover',
-        'ACKOIndia AirPass (Flight Delay Cover)',
+        'ACKOIndia FlightCover (Flight Delay Cover)',
         'Schengen Visa Travel Insurance',
         'Student Overseas Medical Cover'
       ]
@@ -49,8 +48,7 @@ export default function Footer() {
       items: [
         'Group Health for Startups',
         'App-based Gig Worker Insurance',
-        'Logistics & Fleet Protection',
-        'Embedded FinTech API Solutions'
+        'Logistics & Fleet Protection'
       ]
     }
   ];
@@ -123,14 +121,12 @@ export default function Footer() {
         {/* Corporate Address & Social Links */}
         <div className="pt-8 pb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-start gap-3 min-w-0">
-            <div className="w-9 h-9 shrink-0 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-300">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
+            <LogoMark dark className="w-6 h-6 shrink-0" />
             <div className="min-w-0">
-              <h5 className="text-white font-extrabold text-sm sm:text-base leading-snug">
-                ACKOIndia Technology and Services Limited
+              <h5 className="text-white font-bold text-xs sm:text-sm leading-snug lowercase">
+                ACKOIndia
               </h5>
-              <p className="text-xs sm:text-[13px] text-gray-400 mt-1 max-w-xl leading-relaxed">
+              <p className="text-[11px] sm:text-xs text-gray-400 mt-0.5 max-w-xl leading-relaxed">
                 {CONTACT.addressInline}
               </p>
             </div>
@@ -160,7 +156,7 @@ export default function Footer() {
         </div>
 
         <p className="pt-6 mt-2 border-t border-gray-800 text-xs text-gray-500 leading-relaxed">
-          ACKOIndia is an independent platform and is not affiliated with ACKO General Insurance Limited. Quotes shown are indicative only.
+          ACKOIndia is an independent demo project and not the official website of ACKO or ACKO General Insurance Limited. Quotes are illustrative and no real insurance policy is created.
         </p>
 
       </div>

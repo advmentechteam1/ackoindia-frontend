@@ -10,7 +10,7 @@ import healthHeartImg from '../assets/health-heart.png';
 import familyLifeImg from '../assets/family-life.png';
 import electricScooterImg from '../assets/electric-scooter.png';
 import travelGlobeImg from '../assets/travel-globe.png';
-import ackoAirpassImg from '../assets/acko-airpass.png';
+import flightPassImg from '../assets/flight-pass.svg';
 
 const heroCars = [
   { name: 'Tata Sierra', price: '₹2,094*', img: sierraImg },
@@ -40,9 +40,9 @@ const cards = [
     img: travelGlobeImg, imgSize: 'w-28 h-28', bg: 'bg-blue-50/70 border-blue-100'
   },
   {
-    id: 'airpass', product: 'travel', quoteTitle: 'ACKOIndia AirPass', title: 'Flying domestic?',
-    desc: <><span className="text-[#6332ec] font-semibold">ACKOIndia AirPass</span> pays you back for delayed, cancelled and missed flights</>,
-    img: ackoAirpassImg, imgSize: 'w-40 h-28', bg: 'bg-violet-50/70 border-violet-100 sm:col-span-2'
+    id: 'airpass', product: 'travel', quoteTitle: 'ACKOIndia FlightCover', title: 'Flying domestic?',
+    desc: <><span className="text-[#6332ec] font-semibold">ACKOIndia FlightCover</span> pays you back for delayed, cancelled and missed flights</>,
+    img: flightPassImg, imgSize: 'w-40 h-28', bg: 'bg-violet-50/70 border-violet-100 sm:col-span-2'
   }
 ];
 
@@ -174,7 +174,7 @@ export default function HeroSection() {
         {/* Small Bottom Disclaimer Text */}
         <div className="mt-6 text-center">
           <span className="text-[11px] text-gray-400 font-medium">
-            UID: 6484 | ARN: 1.0110 | T&C apply
+            Illustrative demo prices. No real insurance policy is created on this website.
           </span>
         </div>
 

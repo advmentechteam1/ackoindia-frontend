@@ -16,7 +16,7 @@ export default function TrustMetrics() {
           <div className="absolute -top-20 left-1/3 w-72 h-72 rounded-full bg-indigo-500/20 blur-3xl pointer-events-none"></div>
 
           <div className="lg:col-span-4 relative">
-            <span className="text-[11px] font-extrabold uppercase tracking-widest text-emerald-300">What you can expect</span>
+            <span className="text-[11px] font-extrabold uppercase tracking-widest text-emerald-300">Illustrative demo figures</span>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mt-2 leading-tight">
               Trust is earned, one claim at a time
             </h2>

@@ -24,7 +24,7 @@ function ToolList({ title, subtitle, items, accent, footer, showToast }) {
         {items.map(({ icon: Icon, title: t, desc, toast }) => (
           <button
             key={t}
-            onClick={() => showToast(toast)}
+            onClick={() => showToast('Demo only: this tool is not available yet.')}
             className="w-full text-left rounded-2xl bg-white border border-gray-100 hover:border-indigo-300 hover:shadow-md transition p-4 flex items-center gap-3 group"
           >
             <span className="w-10 h-10 rounded-xl bg-gray-100 text-gray-700 flex items-center justify-center shrink-0 group-hover:bg-indigo-600 group-hover:text-white transition">
@@ -86,7 +86,7 @@ export default function AppFeatures() {
                   <div className="mt-4 text-center">
                     <h4 className="text-base font-extrabold text-gray-900">Policy analyser</h4>
                     <p className="text-[11px] text-gray-500 mt-1 leading-snug px-3">
-                      Based on our analysis, this is where your coverage stands.
+                      Illustrative demo: a sample score, not an analysis of a real policy.
                     </p>
                   </div>
 

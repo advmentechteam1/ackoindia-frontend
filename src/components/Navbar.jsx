@@ -27,7 +27,7 @@ import { useInsuranceContext } from '../context/InsuranceContext';
 export default function Navbar() {
   const { openQuoteForProduct, showToast } = useInsuranceContext();
 
-  // Active dropdown: 'products' | 'whyAcko' | 'renewals' | 'claims' | 'lang' | null
+  // Active dropdown: 'products' | 'whyACKOIndia' | 'renewals' | 'claims' | 'lang' | null
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [selectedProductCategory, setSelectedProductCategory] = useState('car');
   const [selectedLanguage, setSelectedLanguage] = useState('en');
@@ -67,7 +67,7 @@ export default function Navbar() {
       promo: {
         title: 'The only pass that pays you back for flight troubles',
         btnText: 'Know more >',
-        tag: 'ACKOIndia AirPass',
+        tag: 'ACKOIndia FlightCover',
         bg: 'bg-gradient-to-br from-neutral-900 to-neutral-800'
       }
     },
@@ -95,7 +95,7 @@ export default function Navbar() {
       icon: HeartPulse,
       subItems: [
         'Health insurance',
-        'ACKOIndia Platinum health plan',
+        'ACKOIndia Health Plus plan',
         'Super top-up health insurance',
         'Arogya Sanjeevani policy',
         'Corporate health insurance'
@@ -103,7 +103,7 @@ export default function Navbar() {
       promo: {
         title: '100% Hospital bill payments. Zero deductions on room rent',
         btnText: 'Explore Health >',
-        tag: 'Platinum Health',
+        tag: 'Health Plus',
         bg: 'bg-gradient-to-br from-rose-950 to-neutral-900'
       }
     },
@@ -147,15 +147,14 @@ export default function Navbar() {
       label: 'Other ACKOIndia Products',
       icon: Grid,
       subItems: [
-        'ACKOIndia AirPass (Flight delays)',
-        'ACKOIndia Drive (Brand new cars)',
-        'Commercial vehicle insurance',
-        'Embedded FinTech solutions'
+        'ACKOIndia FlightCover (Flight delays)',
+        'ACKOIndia Cars (Brand new cars)',
+        'Commercial vehicle insurance'
       ],
       promo: {
-        title: 'Save up to ₹80,000 on brand new cars with ACKOIndia Drive',
+        title: 'Save up to ₹80,000 on brand new cars with ACKOIndia Cars',
         btnText: 'Visit Showroom >',
-        tag: 'ACKOIndia Drive',
+        tag: 'ACKOIndia Cars',
         bg: 'bg-gradient-to-br from-purple-950 to-neutral-900'
       }
     }
@@ -218,15 +217,15 @@ export default function Navbar() {
               {/* 2. Why ACKOIndia? Dropdown Trigger */}
               <div className="relative">
                 <button
-                  onClick={() => toggleDropdown('whyAcko')}
+                  onClick={() => toggleDropdown('whyACKOIndia')}
                   className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl transition ${
-                    activeDropdown === 'whyAcko'
+                    activeDropdown === 'whyACKOIndia'
                       ? 'bg-gray-100 text-gray-950 font-bold'
                       : 'hover:bg-gray-50 hover:text-gray-950'
                   }`}
                 >
                   <span>Why ACKOIndia?</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'whyAcko' ? 'rotate-180 text-gray-950' : 'text-gray-400'}`} />
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'whyACKOIndia' ? 'rotate-180 text-gray-950' : 'text-gray-400'}`} />
                 </button>
               </div>
 
@@ -337,7 +336,7 @@ export default function Navbar() {
                       href="#claims"
                       onClick={() => {
                         setActiveDropdown(null);
-                        showToast('Opened 7-Min Claim Filing wizard');
+                        showToast('Demo only: claim filing is not available yet.');
                       }}
                       className="flex items-center gap-3 px-3.5 py-3 rounded-2xl hover:bg-gray-50 text-sm font-semibold text-gray-800 transition group"
                     >
@@ -348,7 +347,7 @@ export default function Navbar() {
                       href="#claims"
                       onClick={() => {
                         setActiveDropdown(null);
-                        showToast('Live tracking status: No active claim found for this browser session.');
+                        showToast('Demo only: claim tracking is not available yet.');
                       }}
                       className="flex items-center gap-3 px-3.5 py-3 rounded-2xl hover:bg-gray-50 text-sm font-semibold text-gray-800 transition group"
                     >
@@ -522,7 +521,7 @@ export default function Navbar() {
       {/* ------------------------------------------------------------- */}
       {/* 2. WHY ACKOINDIA? DROPDOWN PANEL                              */}
       {/* ------------------------------------------------------------- */}
-      {activeDropdown === 'whyAcko' && (
+      {activeDropdown === 'whyACKOIndia' && (
         <div className="hidden lg:block absolute left-0 right-0 top-full bg-white border-b border-gray-200 shadow-2xl animate-in fade-in slide-in-from-top-1 duration-200 z-50">
           <div className="w-full px-[4%] py-8">
             <div className="grid grid-cols-12 gap-8 items-stretch">
@@ -569,7 +568,7 @@ export default function Navbar() {
                     <button
                       onClick={() => {
                         setActiveDropdown(null);
-                        showToast('Opening verified customer stories archive...');
+                        showToast('Customer stories are coming soon.');
                       }}
                       className="shrink-0 px-4 py-2 rounded-xl bg-white text-gray-900 text-xs font-extrabold hover:bg-indigo-50 transition"
                     >

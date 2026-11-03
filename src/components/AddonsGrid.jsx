@@ -73,7 +73,7 @@ export default function AddonsGrid() {
                 Build the cover your car deserves
               </h2>
               <p className="mt-3 text-sm text-slate-300 leading-relaxed">
-                Pick only the riders you need. Each one is optional and can be added to your policy in a single tap.
+                Sample add-ons for illustration. Prices are indicative and nothing is added to a real policy.
               </p>
 
               <ul className="mt-6 space-y-2.5 text-sm text-slate-200">

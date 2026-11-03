@@ -72,7 +72,7 @@ export default function CarShowroom() {
         <div className="max-w-4xl mx-auto px-[4%] mb-8">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold mb-3 border border-indigo-100/60">
             <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-            <span>Digital Car Showroom • Powered by ACKOIndia DRIVE</span>
+            <span>Digital Car Showroom • Powered by ACKOIndia CARS</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-black text-[#111827] tracking-tight">
@@ -216,12 +216,13 @@ export default function CarShowroom() {
                 id: 'car',
                 title: `Pre-approved insurance & showroom booking for ${currentCar.name}`
               });
-              showToast(`Booking interest recorded for ${currentCar.name}!`);
+              showToast('Demo only: no booking was made.');
             }}
             className="px-8 sm:px-10 py-4 rounded-2xl bg-gray-950 hover:bg-indigo-600 text-white text-xs sm:text-sm font-extrabold shadow-lg transition-all active:scale-95"
           >
             Visit our digital showroom ➔
           </button>
+          <p className="mt-3 px-4 text-xs font-semibold text-gray-500">Illustrative demo: cars, prices and offers are samples. No vehicle is sold on this website.</p>
         </div>
 
       </div>

@@ -23,8 +23,8 @@ const topics = [
 ];
 
 const faqs = [
-  { q: 'How do I raise a claim?', a: 'Open the app, choose Claims, and upload photos or a short video of the damage. For minor car damage most claims are approved in minutes. You can also call us on ' + CONTACT.phoneDisplay + '.' },
-  { q: 'How can I track my claim status?', a: 'Enter your claim number in the tracker on this page, or open Claims in the app. You will also get a WhatsApp update at every step.' },
+  { q: 'How do I raise a claim?', a: 'This website is an illustrative demo and cannot file real claims. Please call us on ' + CONTACT.phoneDisplay + ' to speak with someone about a claim.' },
+  { q: 'How can I track my claim status?', a: 'The tracker on this page is a demo and does not show real claims. Please call or WhatsApp us for the status of a real claim.' },
   { q: 'Where can I download my policy document?', a: 'Your policy is sent on WhatsApp and email right after purchase. You can also download it any time from My Policies in the app.' },
   { q: 'Can I change details on my policy?', a: 'Yes. Name, address, nominee and contact details can be updated from the app. Changes that affect the premium, like vehicle details, are reviewed by our team.' },
   { q: 'How do I get a refund after cancelling?', a: 'Eligible refunds are credited to the original payment method within 7 working days of the cancellation being approved.' },
@@ -43,13 +43,13 @@ export default function SupportPage() {
 
   const track = (e) => {
     e.preventDefault();
-    showToast(`Tracking claim ${claimNo.trim()}... Status updates will arrive on WhatsApp.`);
+    showToast('Demo only: claim tracking is not available yet. Please call or WhatsApp us for claim status.');
     setClaimNo('');
   };
 
   const submit = (e) => {
     e.preventDefault();
-    showToast(`Thanks ${form.name || 'there'}! Our support team will call you back soon.`);
+    showToast('Demo only: this form does not send your message. Please call or WhatsApp us.');
     setForm({ name: '', phone: '', topic: 'Claims', msg: '' });
   };
 
@@ -133,7 +133,7 @@ export default function SupportPage() {
             <ClipboardCheck className="w-6 h-6" />
           </span>
           <h2 className="mt-4 text-2xl sm:text-3xl font-black tracking-tight leading-tight">Track your claim</h2>
-          <p className="mt-2 text-sm text-slate-300">Enter your claim number to see where things stand. Updates also reach you on WhatsApp.</p>
+          <p className="mt-2 text-sm text-slate-300">Demo tracker: it does not show real claims. For a real claim status, please call or WhatsApp us.</p>
           <form onSubmit={track} className="mt-6 flex flex-col sm:flex-row gap-3">
             <input
               required

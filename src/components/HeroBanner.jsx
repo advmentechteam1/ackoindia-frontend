@@ -9,7 +9,7 @@ import scooterImg from '../assets/electric-scooter.png';
 import heartImg from '../assets/health-heart.png';
 import familyImg from '../assets/family-life.png';
 import globeImg from '../assets/travel-globe.png';
-import airpassImg from '../assets/acko-airpass.png';
+import airpassImg from '../assets/flight-pass.svg';
 
 const slides = [
   {
@@ -55,8 +55,8 @@ const slides = [
     img: globeImg, bg: 'from-blue-50 via-white to-cyan-50', accent: 'bg-cyan-300/40', imgClass: ''
   },
   {
-    id: 'airpass', product: 'travel', label: 'ACKOIndia AirPass', title: 'Get paid when your flight is delayed',
-    desc: 'AirPass pays you back for delayed, cancelled and missed domestic flights.',
+    id: 'airpass', product: 'travel', label: 'ACKOIndia FlightCover', title: 'Get paid when your flight is delayed',
+    desc: 'FlightCover pays you back for delayed, cancelled and missed domestic flights.',
     points: ['Instant payout', 'Unlimited flights for a year'],
     img: airpassImg, bg: 'from-violet-50 via-white to-fuchsia-50', accent: 'bg-violet-300/40', imgClass: ''
   }
@@ -121,6 +121,7 @@ export default function HeroBanner() {
               >
                 Get a quote <ArrowRight className="w-4 h-4" />
               </button>
+              <p className="mt-3 text-xs font-semibold text-gray-500">Illustrative demo: prices and offers shown are samples.</p>
             </div>
           </div>
         </div>
@@ -150,7 +151,7 @@ export default function HeroBanner() {
                     i === active ? 'bg-gray-950 text-white' : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-400'
                   }`}
                 >
-                  {s.id === 'airpass' ? 'AirPass' : s.id.charAt(0).toUpperCase() + s.id.slice(1)}
+                  {s.id === 'airpass' ? 'FlightCover' : s.id.charAt(0).toUpperCase() + s.id.slice(1)}
                   {i === active && !paused && (
                     <span key={`${active}-run`} className="absolute left-0 bottom-0 h-0.5 w-full bg-[#a78bfa] origin-left" style={{ animation: `heroFill ${INTERVAL}ms linear forwards` }}></span>
                   )}

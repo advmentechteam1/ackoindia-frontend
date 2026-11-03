@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
-  Building2, Users, Truck, Bike, Code2, ShieldCheck, HeartPulse, Briefcase,
-  ArrowRight, Check, Zap, FileText, BarChart3, Headphones, Rocket, Send
+  Building2, Users, Truck, Bike, ShieldCheck, HeartPulse, Briefcase,
+  ArrowRight, Check, FileText, BarChart3, Headphones, Rocket, Send
 } from 'lucide-react';
 import { useInsuranceContext } from '../context/InsuranceContext';
 
@@ -9,7 +9,6 @@ const solutions = [
   { icon: HeartPulse, title: 'Group Health', desc: 'Cashless cover for employees and their families, live from day one. Add or remove members in minutes.', tag: 'Most chosen', tone: 'rose' },
   { icon: Bike, title: 'Gig Worker Cover', desc: 'Accident and medical cover for delivery and app-based partners, active only while they work.', tag: 'Pay per use', tone: 'emerald' },
   { icon: Truck, title: 'Fleet & Logistics', desc: 'One policy for every vehicle, with goods-in-transit cover and a single claims desk.', tag: 'Commercial', tone: 'amber' },
-  { icon: Code2, title: 'Embedded Insurance API', desc: 'Sell cover inside your own app or checkout with a few lines of code. We handle issuance and claims.', tag: 'For platforms', tone: 'indigo' },
   { icon: Briefcase, title: 'Employee Benefits', desc: 'Term life, personal accident and wellness plans bundled into one benefits dashboard.', tag: 'HR teams', tone: 'sky' },
   { icon: Building2, title: 'Property & Office', desc: 'Protect offices, stock and equipment against fire, theft and natural calamities.', tag: 'SMEs', tone: 'violet' }
 ];
@@ -27,13 +26,13 @@ const stats = [
   { v: '24 hrs', l: 'Quote turnaround' },
   { v: '1 day', l: 'Typical onboarding' },
   { v: '60 min', l: 'Cashless pre-auth' },
-  { v: 'API', l: 'Embedded cover' }
+  { v: '24x7', l: 'Support for your team' }
 ];
 
 const steps = [
   { icon: FileText, title: 'Tell us about your team', desc: 'Share headcount, locations and the cover you need. No lengthy forms.' },
   { icon: BarChart3, title: 'Get a tailored plan', desc: 'A dedicated advisor builds a plan and a transparent quote within 24 hours.' },
-  { icon: Rocket, title: 'Go live in days', desc: 'Onboard employees through a single sheet or an API. Policies are issued instantly.' },
+  { icon: Rocket, title: 'Go live in days', desc: 'Onboard employees through a single spreadsheet. Policies are issued quickly, without paperwork.' },
   { icon: Headphones, title: 'We stay by your side', desc: 'A named account manager and a 24x7 helpline for you and your people.' }
 ];
 
@@ -46,17 +45,6 @@ const perks = [
   'GST invoices and audit-ready reports'
 ];
 
-const snippet = `POST /v1/policies
-{
-  "product": "gig_accident",
-  "partner_id": "rider_48211",
-  "cover_amount": 500000,
-  "valid_for": "8h"
-}
-
-// 201 Created
-{ "policy_id": "pol_91x2", "status": "active" }`;
-
 export default function EnterprisePage() {
   const { showToast } = useInsuranceContext();
   const [form, setForm] = useState({ name: '', company: '', email: '', size: '11-50', need: 'Group Health' });
@@ -65,7 +53,7 @@ export default function EnterprisePage() {
 
   const submit = (e) => {
     e.preventDefault();
-    showToast(`Thanks ${form.name || 'there'}! Our enterprise team will contact you within 24 hours.`);
+    showToast('Demo only: this form does not send your details. Please email enterprise@ackoindia.com instead.');
     setForm({ name: '', company: '', email: '', size: '11-50', need: 'Group Health' });
   };
 
@@ -88,7 +76,7 @@ export default function EnterprisePage() {
               Insurance your team <span className="text-violet-300">will actually use</span>
             </h1>
             <p className="mt-5 text-base sm:text-lg text-slate-300 max-w-xl font-medium">
-              Health, accident, fleet and embedded cover for businesses of every size. Fast onboarding, cashless care and claims that settle in minutes.
+              Health, accident, fleet and property cover for businesses of every size. Fast onboarding, cashless care and claims that settle in minutes.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <button onClick={scrollToForm} className="px-7 py-3.5 rounded-2xl bg-white text-gray-900 text-sm font-extrabold hover:bg-indigo-50 transition inline-flex items-center gap-2">
@@ -160,12 +148,12 @@ export default function EnterprisePage() {
         </div>
       </section>
 
-      {/* Why + API */}
-      <section className="w-full px-[4%] py-16 sm:py-20 grid lg:grid-cols-2 gap-8 items-stretch">
+      {/* Why teams choose us */}
+      <section className="w-full px-[4%] py-16 sm:py-20">
         <div className="rounded-[28px] border border-gray-200 bg-white p-8">
           <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#6332ec]">Why teams choose us</span>
           <h2 className="text-3xl font-black text-gray-900 tracking-tight mt-2 leading-[1.1]">Built for HR, finance and product teams</h2>
-          <ul className="mt-6 space-y-3">
+          <ul className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-3">
             {perks.map((p) => (
               <li key={p} className="flex items-center gap-3 text-sm font-semibold text-gray-800">
                 <span className="w-6 h-6 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
@@ -175,15 +163,6 @@ export default function EnterprisePage() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div className="rounded-[28px] bg-gray-950 text-white p-8 flex flex-col">
-          <div className="flex items-center gap-2 text-xs font-bold text-emerald-300 uppercase tracking-widest">
-            <Zap className="w-4 h-4" /> Embedded insurance API
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-black tracking-tight mt-3 leading-tight">Add insurance to your app in an afternoon</h2>
-          <p className="text-sm text-slate-400 mt-2">Create a policy with one request. We take care of underwriting, documents and claims.</p>
-          <pre className="mt-6 flex-1 rounded-2xl bg-black/50 border border-white/10 p-5 text-[12px] sm:text-[13px] leading-relaxed text-emerald-200 overflow-x-auto"><code>{snippet}</code></pre>
         </div>
       </section>
 

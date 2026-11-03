@@ -15,27 +15,27 @@ export default function ComparisonSection() {
     {
       feature: 'Premium & commissions',
       traditional: 'Agent commission of 15-20% is quietly added to your premium.',
-      acko: 'No middlemen. The full saving comes back to you.'
+      us: 'No middlemen. The full saving comes back to you.'
     },
     {
       feature: 'Buying the policy',
       traditional: '2-4 days, paper signatures and physical forms.',
-      acko: 'Done in 60 seconds. Policy lands on WhatsApp.'
+      us: 'Done in 60 seconds. Policy lands on WhatsApp.'
     },
     {
       feature: 'Raising a claim',
       traditional: 'Surveyor visits in 3-7 days, followed by long paperwork.',
-      acko: 'Upload photos or a video in the app. Approval in about 7 minutes.'
+      us: 'Upload photos or a video in the app. Approval in about 7 minutes.'
     },
     {
       feature: 'Repair & treatment network',
       traditional: 'Few authorised workshops and bills to reimburse later.',
-      acko: '14,000+ cashless garages and hospitals with doorstep pick-up.'
+      us: '14,000+ cashless garages and hospitals with doorstep pick-up.'
     },
     {
       feature: 'Hospital bill deductions',
       traditional: 'Room rent sub-limits, ICU caps and medicine deductions.',
-      acko: 'Cashless admission. No deductions on approved bills.'
+      us: 'Cashless admission. No deductions on approved bills.'
     }
   ];
 
@@ -94,7 +94,7 @@ export default function ComparisonSection() {
             </ul>
           </div>
 
-          {/* ACKO */}
+          {/* ACKOIndia */}
           <div className="rounded-[28px] bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 text-white p-7 relative overflow-hidden shadow-2xl">
             <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-indigo-500/25 blur-3xl pointer-events-none"></div>
             <div className="relative flex items-center justify-between mb-5">
@@ -109,7 +109,7 @@ export default function ComparisonSection() {
                   </span>
                   <div>
                     <div className="text-sm font-bold text-white">{row.feature}</div>
-                    <p className="text-sm text-slate-300 mt-0.5 leading-relaxed">{row.acko}</p>
+                    <p className="text-sm text-slate-300 mt-0.5 leading-relaxed">{row.us}</p>
                   </div>
                 </li>
               ))}
@@ -121,7 +121,7 @@ export default function ComparisonSection() {
         <div className="mt-6 rounded-2xl bg-white border border-gray-200 px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-xs font-semibold text-gray-600">
             <ShieldCheck className="w-4 h-4 text-indigo-600" />
-            <span>Clear pricing • No hidden clauses • Carry over your No Claim Bonus</span>
+            <span>Illustrative comparison for this demo • Not a real offer</span>
           </div>
           <button
             onClick={() => openQuoteForProduct({ id: 'car', title: 'Compare Rates Live' })}

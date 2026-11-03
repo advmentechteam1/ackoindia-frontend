@@ -46,11 +46,11 @@ export default function Home() {
 
   useEffect(() => {
     const titles = {
-      enterprise: 'ACKOIndia for Enterprise: Group Health, Fleet & Embedded Insurance',
+      enterprise: 'ACKOIndia for Enterprise: Group Health, Fleet & Property Insurance',
       support: 'ACKOIndia Support: Claims, Policies & Help',
       privacy: 'Privacy Policy | ACKOIndia',
       terms: 'Terms & Conditions | ACKOIndia',
-      home: 'ACKOIndia: Direct Car, Bike & Health Insurance | Instant 7-Min Claims'
+      home: 'ACKOIndia: Direct Car, Bike & Health Insurance'
     };
     document.title = titles[page];
   }, [page]);

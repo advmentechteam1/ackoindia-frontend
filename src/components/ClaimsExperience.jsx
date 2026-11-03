@@ -60,7 +60,7 @@ export default function ClaimsExperience() {
                 <div className="pt-10 pb-3 px-5 bg-gradient-to-b from-[#f5efff] to-white border-b border-gray-100 flex items-center justify-between">
                   <h4 className="text-sm font-extrabold text-gray-900">File a claim</h4>
                   <span className="flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Live
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Demo
                   </span>
                 </div>
 
@@ -89,7 +89,7 @@ export default function ClaimsExperience() {
 
                 <div className="p-3 border-t border-gray-100 bg-gray-50/70">
                   <button
-                    onClick={() => showToast('Claim camera simulation active')}
+                    onClick={() => showToast('Demo only: photo upload is not available.')}
                     className="w-full py-2.5 px-3 rounded-xl bg-white border border-gray-200 text-gray-400 text-xs text-left font-medium hover:border-gray-400 transition"
                   >
                     Tap to upload photo...
@@ -99,7 +99,7 @@ export default function ClaimsExperience() {
             </div>
 
             <span className="mt-5 text-[11px] text-gray-500 font-semibold">
-              Direct AI inspection • Approval in minutes
+              Illustrative demo • No real claim is filed
             </span>
           </div>
 
@@ -161,7 +161,7 @@ export default function ClaimsExperience() {
               </div>
 
               <button
-                onClick={() => showToast('Opening customer stories archive...')}
+                onClick={() => showToast('Customer stories are coming soon.')}
                 className="px-6 py-2.5 rounded-xl bg-gray-950 hover:bg-indigo-600 text-white text-xs font-bold transition"
               >
                 View more

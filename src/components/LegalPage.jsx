@@ -63,8 +63,8 @@ const docs = {
         p: ['ACKOIndia provides information about insurance and lets you request indicative quotes and contact our team. Content and quotes shown here are for information only and are not an offer, a contract or a policy.']
       },
       {
-        h: 'No affiliation',
-        p: ['ACKOIndia is an independent platform. It is not affiliated with, endorsed by or connected to ACKO General Insurance Limited or any other insurer or brand mentioned on this website.']
+        h: 'Independent demo project',
+        p: ['ACKOIndia is an independent demo project. It is not the official website of ACKO or ACKO General Insurance Limited, and it is not affiliated with, endorsed by or connected to them or any other insurer or brand mentioned on this website. Quotes, claims, tracking and forms on this website are illustrative: no real insurance policy is created and no claim is filed.']
       },
       {
         h: 'Quotes and prices',
