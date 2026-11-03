@@ -14,6 +14,7 @@ import PressRecognition from '../components/PressRecognition';
 import FaqSection from '../components/FaqSection';
 import EnterprisePage from '../components/EnterprisePage';
 import SupportPage from '../components/SupportPage';
+import LegalPage from '../components/LegalPage';
 import Footer from '../components/Footer';
 import QuoteModal from '../components/QuoteModal';
 import { useInsuranceContext } from '../context/InsuranceContext';
@@ -25,6 +26,8 @@ export default function Home() {
     const h = window.location.hash;
     if (h === '#enterprise') return 'enterprise';
     if (h === '#support') return 'support';
+    if (h === '#privacy') return 'privacy';
+    if (h === '#terms') return 'terms';
     return 'home';
   };
   const [page, setPage] = useState(readPage);
@@ -45,6 +48,8 @@ export default function Home() {
     const titles = {
       enterprise: 'ACKOIndia for Enterprise: Group Health, Fleet & Embedded Insurance',
       support: 'ACKOIndia Support: Claims, Policies & Help',
+      privacy: 'Privacy Policy | ACKOIndia',
+      terms: 'Terms & Conditions | ACKOIndia',
       home: 'ACKOIndia: Direct Car, Bike & Health Insurance | Instant 7-Min Claims'
     };
     document.title = titles[page];
@@ -72,6 +77,10 @@ export default function Home() {
         {page === 'enterprise' ? (
           <Reveal from="up">
             <EnterprisePage />
+          </Reveal>
+        ) : page === 'privacy' || page === 'terms' ? (
+          <Reveal from="up">
+            <LegalPage type={page} />
           </Reveal>
         ) : page === 'support' ? (
           <Reveal from="up">

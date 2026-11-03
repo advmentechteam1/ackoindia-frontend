@@ -77,12 +77,11 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
             {[
-              ['Products', [['Car insurance', '#products'], ['Bike insurance', '#products'], ['Health insurance', '#products'], ['Life insurance', '#products'], ['Travel insurance', '#products'], ['Enterprise solutions', '#enterprise']]],
-              ['Company', [['About us', '#about'], ['Careers', '#careers'], ['Support', '#support'], ['Contact us', '#support'], ['Board of directors', '#board'], ['Investor relations', '#investors']]],
-              ['Brand Hub', [['All resources', '#resources'], ['Customer stories', '#stories'], ['Media Kit', '#media'], ['Articles & Guides', '#articles'], ['E-books', '#ebooks']]],
-              ['Legal & Disclosures', [['Financials & Disclosures', '#disclosures'], ['Privacy policy', '#privacy'], ['Terms & conditions', '#terms'], ['Anti-fraud policy', '#fraud'], ['Grievance Redressal', '#grievance']]]
+              ['Products', [['Car insurance', '#'], ['Bike insurance', '#'], ['Health insurance', '#'], ['Life insurance', '#'], ['Travel insurance', '#'], ['Enterprise solutions', '#enterprise']]],
+              ['Company', [['Support', '#support'], ['Contact us', '#support'], ['Enterprise', '#enterprise']]],
+              ['Legal', [['Privacy policy', '#privacy'], ['Terms & conditions', '#terms'], ['Fraud awareness', '#terms'], ['Grievance & complaints', '#support']]]
             ].map(([title, links]) => (
               <div key={title}>
                 <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-4">{title}</h4>
