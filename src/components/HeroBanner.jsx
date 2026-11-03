@@ -128,7 +128,20 @@ export default function HeroBanner() {
         {/* Bottom bar: progress tabs + arrows */}
         <div className="absolute bottom-0 inset-x-0 border-t border-black/5 bg-white/60 backdrop-blur">
           <div className="w-full px-[4%] py-3 flex items-center justify-between gap-4">
-            <div className="flex-1 flex items-center gap-2 overflow-x-auto">
+            {/* Mobile: compact dots */}
+            <div className="flex sm:hidden items-center gap-1.5">
+              {slides.map((s, i) => (
+                <button
+                  key={s.id}
+                  onClick={() => setActive(i)}
+                  aria-label={`Show ${s.label} ${i + 1}`}
+                  className={`h-2 rounded-full transition-all ${i === active ? 'w-6 bg-[#6332ec]' : 'w-2 bg-gray-300'}`}
+                />
+              ))}
+            </div>
+
+            {/* Tablet/desktop: labelled tabs */}
+            <div className="hidden sm:flex flex-1 min-w-0 items-center gap-2 overflow-x-auto no-scrollbar">
               {slides.map((s, i) => (
                 <button
                   key={s.id}
