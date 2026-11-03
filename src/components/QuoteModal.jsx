@@ -20,7 +20,7 @@ export default function QuoteModal() {
     await fetchQuote({
       productType: selectedProduct.id || 'car',
       identifier: inputVal || 'MH 02 CK 4421',
-      mobile: mobile || '9876543210'
+      mobile: mobile || ''
     });
   };
 
@@ -80,7 +80,7 @@ export default function QuoteModal() {
 
               <div>
                 <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
-                  Mobile Number (For WhatsApp Policy PDF)
+                  Mobile number (optional)
                 </label>
                 <div className="flex">
                   <span className="inline-flex items-center px-3.5 rounded-l-xl border border-r-0 border-gray-200 bg-gray-50 text-gray-600 text-sm font-bold">
@@ -88,7 +88,6 @@ export default function QuoteModal() {
                   </span>
                   <input
                     type="tel"
-                    required
                     placeholder="98765 43210"
                     maxLength={10}
                     value={mobile}
@@ -101,9 +100,13 @@ export default function QuoteModal() {
               <div className="bg-emerald-50 border border-emerald-100 rounded-2xl p-3.5 flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0" />
                 <span className="text-xs text-emerald-900 font-medium">
-                  Direct pricing applied: You save approximately <strong className="font-extrabold text-emerald-700">up to 85%</strong> versus traditional agent rates.
+                  This is an indicative estimate. Your final price depends on the details you provide.
                 </span>
               </div>
+
+              <p className="text-[11px] text-gray-500 leading-relaxed">
+                We only use these details to prepare your estimate. We never ask for passwords, OTPs, card or bank details here.
+              </p>
 
               <button
                 type="submit"
