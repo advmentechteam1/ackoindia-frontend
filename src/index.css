@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #111827;
+    overflow-x: hidden;
+  }
+}
+
+/* 4% Left and Right Padding across the webpage */
+.webpage-padding {
+  padding-left: 4% !important;
+  padding-right: 4% !important;
+  width: 100%;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Hero animations */
+@keyframes heroImgIn {
+  from { opacity: 0; transform: translateX(80px) scale(0.92) rotate(2deg); }
+  to { opacity: 1; transform: translateX(0) scale(1) rotate(0); }
+}
+@keyframes heroTextUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes heroDrift {
+  0%, 100% { transform: translate(0, -50%) scale(1); }
+  50% { transform: translate(-40px, -45%) scale(1.12); }
+}
+.hero-img-in { animation: heroImgIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+.hero-up { animation: heroTextUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+.hero-float { animation: heroFloat 4.5s ease-in-out infinite; }
+.hero-drift { animation: heroDrift 9s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-img-in, .hero-up, .hero-float, .hero-drift { animation: none; }
+}
